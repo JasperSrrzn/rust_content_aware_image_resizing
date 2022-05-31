@@ -7,15 +7,15 @@ pub fn crop(image: &ImageWrapper) -> ImageWrapper {
     let mut start = Instant::now();
     let energy = image.get_energy();
     let mut duration = start.elapsed();
-    println!("Energy calculation took {:?}", duration);
+    debug!("Energy calculation took {:?}", duration);
     start = Instant::now();
     let result = get_minimum_seam(&image, &energy);
     duration = start.elapsed();
-    println!("Finding seam took {:?}", duration);
+    debug!("Finding seam took {:?}", duration);
     start = Instant::now();
     let img = remove_seam_from_image(result, image.get_image());
     duration = start.elapsed();
-    println!("Stripping took {:?}", duration);
+    debug!("Stripping took {:?}", duration);
     ImageWrapper::new(img)
 }
 
