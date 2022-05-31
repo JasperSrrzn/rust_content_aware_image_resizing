@@ -36,14 +36,8 @@ fn main() {
         info!("Iteration {}", n);
         image = crop(&image);
         info!("The image now has a size: {}x{}.", image.get_image().width(), image.get_image().height());
-        let image_result = image.get_image().save(format!("./images/video_france/output_{}.jpg", n));
-        match image_result {
-            Ok(_) => {}
-            Err(e) => panic!("{}", e)
-        }
         info!("==========================");
     }
-
 
     info!("Finished with an image size of {}x{}", image.get_image().width(), image.get_image().height());
     let image_result = image.get_image().save(&options.outputpath);
