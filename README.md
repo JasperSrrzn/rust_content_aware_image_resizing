@@ -1,4 +1,4 @@
-#Seam carving
+# Seam carving
 This project calculates the seam with the lowest energy. 
 A seam is like a path of pixels. 
 The lowest energy means that the seam does not contain a lot of information and can 
@@ -7,7 +7,7 @@ The idea is illustrated in the following example.
 ![Original](images/surfer.jpg?raw=true "original")
 ![Resized](images/output.jpg?raw=true "resized")
 
-#Running the project
+# Running the project
 Clone the project and run
 ```
 cargo install --path ./
